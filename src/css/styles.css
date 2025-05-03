@@ -36,7 +36,6 @@ main {
 }
 
 .container {
- 
   width: 60%; /* se for uma tela menor que 980px vai se adaptar a 70% */
   max-width: 960px; /* quando chegar em 980px para de aumentar */
   box-shadow: rgba(0, 0, 0, 0.3) 0px 25px 50px -12px;
@@ -64,7 +63,6 @@ main {
 }
 
 .container header #input-search {
-  
   width: 400px;
   font-size: 17px;
   margin: 0 auto;
