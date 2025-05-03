@@ -4,7 +4,12 @@ const screen = {
         this.userProfile.innerHTML = `<div class="info">
                                          <img src="${user.avatarUrl}" alt= "foto do perfil do usuario" /> 
                                         <div class="data">
-                                             <h1>${user.name ?? 'Não possui nome cadastrado 😢'}<h1>
+                                             <h1>${user.name ?? 'Não possui nome cadastrado 😢'}</h1>
+                                             <div class="followers-div">
+                                                 <h3>Seguidores: ${user.followers}</h3>
+                                                    <h3>Seguindo: ${user.following}</h3>
+                                             </div>
+                                            
                                              <p>${user.bio ?? 'Não possui bio cadastrada 😢'}</p>
                                         </div>
                                      </div>`

@@ -213,3 +213,11 @@ main {
   padding: 20px;
   border-radius: 30px;
 }
+
+.info .data .followers-div{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  padding: 30px;
+}
