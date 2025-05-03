@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  color: rgb(239, 231, 220);
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  background-color:#24292e;
+  font-family: "Kumbh Sans", sans-serif;  
+  text-align: center;    
+  padding-bottom: 100px;
+}
+
+main {
+  display: flex;  
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px 0 0;      
+}
+
+.devicon-github-original{
+  font-size: 60px;
+  margin-bottom: 30px;
+  color: #FFFFFF;
+}
+
+.section{
+  padding: 70px 0;
+}
+
+.container {
+  width: 60%; /* se for uma tela menor que 980px vai se adaptar a 70% */
+  max-width: 960px; /* quando chegar em 980px para de aumentar */
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 25px 50px -12px;
+  background-color: #2f394c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 30px;
+  padding: 30px;
+  margin: 0 auto;
+}
+
+.container header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 0;
+}
+
+.container header h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.container header #input-search {
+  width: 400px;
+  font-size: 17px;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 30px;
+  border: none;
+  color: #ffffff;
+  background-color: #24292e;
+}
+
+.container header #btn-search {
+  width: 200px;
+  font-size: 17px;
+  margin: 20px auto 0;
+  padding: 10px;
+  border-radius: 30px;  
+  cursor: pointer;
+  border: none;
+  background-color: #24292e;
+}
+
+.container header #btn-search:hover {
+  background-color: #2b4d8c;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.container .profile-data{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;  
+  background-color: #24292e;
+  border-radius: 30px;
+}
+
+.container .profile-data .info {
+  display: flex;  
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.container .profile-data  .data{
+  padding: 40px;
+  width: 50%;
+
+}
+
+.container .profile-data img{
+  width: 50%;
+  margin-top: 30px;
+  border-radius: 50%;
+  border: 10px solid rgb(45, 85, 158);
+}
+
+.container .profile-data .info h1{
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.container .profile-data  p{
+  font-size: 15px;  
+  font-weight: 400;
+  line-height: 15px;
+  color:rgba(253, 253, 253, 0.3);
+}
+
+/* REPOSITORIES */
+
+.container .profile-data .repositories h2{
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.container .profile-data .repositories ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container .profile-data .repositories ul li a{
+  background-color: #2f394c;
+  min-width: 300px;
+  padding: 15px;
+  border: none;  
+  margin: 10px;
+  display: block;
+  border-radius: 30px;
+  transition: 0.3s ease-in-out;
+}
+
+.container .profile-data .repositories ul li a:hover{
+  background-color:rgb(57, 135, 199);
+  color: #fff
+}
+
+.container .profile-data.hide{
+  display: none;
+}
+
+@media (max-width: 1280px) {
+  .container {
+    flex-direction: column;
+    width: 90%;
+    border-radius: 20px;
+  }
+
+  .container header {
+    width: 100%;
+  }
+
+  .container header h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .container header #input-search,
+  .container header #btn-search
+  {
+    width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+  main {
+    padding: 15% 0;    
+  }
+
+  .container .profile-data .info img{
+    margin-bottom: 20px;
+  }
+
+  .container .profile-data .info img,
+  .container .profile-data .info .data
+  {
+    width: 100%;
+    padding: 0;
+  }
+}
