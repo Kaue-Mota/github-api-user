@@ -1,6 +1,7 @@
 const user = {
     avatarUrl:'',
     name:'',
+    bio:'',
     userName:'',
     repositories:[],
     setInfo(gitHubUser){
@@ -14,4 +15,4 @@ const user = {
     }
 }
 
-export {user}
+export { user }
