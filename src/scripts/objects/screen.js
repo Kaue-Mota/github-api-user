@@ -17,7 +17,7 @@ const screen = {
         
         let repositoriesItens = '' 
         user.repositories.forEach(repo => repositoriesItens+= `<li><a href="${repo.html_url}"target="_blank">${repo.name} </a></li>`)
-        console.log(repositoriesItens)
+       
             
         if (user.repositories.length > 0){
             this.userProfile.innerHTML += `<div class="repositories section">
@@ -28,10 +28,26 @@ const screen = {
         }
     
     },
+
     renderNotFound(){
         this.userProfile.innerHTML = `<h3 class="user-not-found">Usuário não encontrado</h3>`
+    },
+
+    renderEvents(user){
+        let eventItens = ''
+        user.events.forEach(event =>
+            eventItens += `<li><a> ${event.repo.name} </a> <a class="message"> - ${event.payload.commits && event.payload.commits.length > 0 ? event.payload.commits[0].message : 'Sem mensagem de commit'} </a></li>`
+        )
+
+        if (user.events.length > 0){
+            this.userProfile.innerHTML += `<div class="events section">
+                                                <h2>Eventos</h2> 
+                                                 <ul>${eventItens}</ul>
+                                            </div>`
+        }
     }
 
 }
+
 
 export { screen }
